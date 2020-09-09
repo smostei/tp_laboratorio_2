@@ -1,0 +1,9 @@
+C:\Users\user\source\repos\Laboratorio2TP\Entidades\bin\Debug\netstandard2.0\Entidades.deps.json
+C:\Users\user\source\repos\Laboratorio2TP\Entidades\bin\Debug\netstandard2.0\Entidades.dll
+C:\Users\user\source\repos\Laboratorio2TP\Entidades\bin\Debug\netstandard2.0\Entidades.pdb
+C:\Users\user\source\repos\Laboratorio2TP\Entidades\obj\Debug\netstandard2.0\Entidades.csprojAssemblyReference.cache
+C:\Users\user\source\repos\Laboratorio2TP\Entidades\obj\Debug\netstandard2.0\Entidades.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\Laboratorio2TP\Entidades\obj\Debug\netstandard2.0\Entidades.AssemblyInfo.cs
+C:\Users\user\source\repos\Laboratorio2TP\Entidades\obj\Debug\netstandard2.0\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Laboratorio2TP\Entidades\obj\Debug\netstandard2.0\Entidades.dll
+C:\Users\user\source\repos\Laboratorio2TP\Entidades\obj\Debug\netstandard2.0\Entidades.pdb

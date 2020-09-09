@@ -1,0 +1,13 @@
+C:\Users\user\source\repos\Laboratorio2TP\CalculadoraTP\bin\Debug\CalculadoraTP.exe.config
+C:\Users\user\source\repos\Laboratorio2TP\CalculadoraTP\bin\Debug\CalculadoraTP.exe
+C:\Users\user\source\repos\Laboratorio2TP\CalculadoraTP\bin\Debug\CalculadoraTP.pdb
+C:\Users\user\source\repos\Laboratorio2TP\CalculadoraTP\bin\Debug\Entidades.dll
+C:\Users\user\source\repos\Laboratorio2TP\CalculadoraTP\bin\Debug\Entidades.pdb
+C:\Users\user\source\repos\Laboratorio2TP\CalculadoraTP\obj\Debug\CalculadoraTP.csprojAssemblyReference.cache
+C:\Users\user\source\repos\Laboratorio2TP\CalculadoraTP\obj\Debug\CalculadoraTP.FormCalculadora.resources
+C:\Users\user\source\repos\Laboratorio2TP\CalculadoraTP\obj\Debug\CalculadoraTP.Properties.Resources.resources
+C:\Users\user\source\repos\Laboratorio2TP\CalculadoraTP\obj\Debug\CalculadoraTP.csproj.GenerateResource.cache
+C:\Users\user\source\repos\Laboratorio2TP\CalculadoraTP\obj\Debug\CalculadoraTP.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Laboratorio2TP\CalculadoraTP\obj\Debug\CalculadoraTP.csproj.CopyComplete
+C:\Users\user\source\repos\Laboratorio2TP\CalculadoraTP\obj\Debug\CalculadoraTP.exe
+C:\Users\user\source\repos\Laboratorio2TP\CalculadoraTP\obj\Debug\CalculadoraTP.pdb
