@@ -57,6 +57,9 @@ namespace CalculadoraTP
         {
             parseBinarioButton.Enabled = false;
             parseDecimalButton.Enabled = true;
+
+            Numero num = new Numero(resultadoLabel.Text);
+            resultadoLabel.Text = num.DecimalBinario(resultadoLabel.Text);
         }
 
         private void parseDecimalButton_Click(object sender, EventArgs e)
