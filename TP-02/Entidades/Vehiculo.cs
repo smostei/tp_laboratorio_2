@@ -56,18 +56,18 @@ namespace Entidades
         /// <returns></returns>
         public virtual string Mostrar()
         {
-            StringBuilder sb = new StringBuilder();
-
-            sb.AppendLine($"CHASIS: {chasis}\r");
-            sb.AppendLine($"MARCA : {marca}\r");
-            sb.AppendLine($"COLOR : {color}\r");
-
-            return sb.ToString();
+            return (string) this;
         }
 
         public static explicit operator string(Vehiculo vehiculo)
         {
-            return vehiculo.chasis;
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine($"CHASIS: {vehiculo.chasis}\r");
+            sb.AppendLine($"MARCA : {vehiculo.marca}\r");
+            sb.AppendLine($"COLOR : {vehiculo.color}\r");
+
+            return sb.ToString();
         }
 
         /// <summary>
