@@ -8,6 +8,7 @@ namespace Entidades
     /// </summary>
     public abstract class Vehiculo
     {
+        #region "Enumerados"
         public enum EMarca
         {
             Chevrolet, 
@@ -24,23 +25,31 @@ namespace Entidades
             Mediano, 
             Grande
         }
+        #endregion
 
+        #region Atributos
         private EMarca marca;
         private string chasis;
         private ConsoleColor color;
+        #endregion
 
+        #region "Constructores"
         public Vehiculo(string chasis, EMarca marca, ConsoleColor color)
         {
             this.chasis = chasis;
             this.marca = marca;
             this.color = color;
         }
+        #endregion
 
+        #region "Propiedades"
         /// <summary>
         /// ReadOnly: Retornará el tamaño
         /// </summary>
         public abstract ETamanio Tamanio { get; }
+        #endregion
 
+        #region "Metodos"
         /// <summary>
         /// Publica todos los datos del Vehiculo.
         /// </summary>
@@ -81,5 +90,6 @@ namespace Entidades
         {
             return !(v1.chasis == v2.chasis);
         }
+        #endregion
     }
 }

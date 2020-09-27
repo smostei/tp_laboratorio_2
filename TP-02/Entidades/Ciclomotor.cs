@@ -5,8 +5,11 @@ namespace Entidades
 {
     public class Ciclomotor : Vehiculo
     {
+        #region "Constructores"
         public Ciclomotor(EMarca marca, string chasis, ConsoleColor color) : base(chasis, marca, color) {}
+        #endregion
 
+        #region "Propiedades"
         /// <summary>
         /// Las motos son chicas
         /// </summary>
@@ -14,7 +17,13 @@ namespace Entidades
         {
             get => ETamanio.Chico;      
         }
+        #endregion
 
+        #region "Metodos"
+        /// <summary>
+        /// Override de la clase Vehiculo, se mostrará la info del Vehiculo más la que contiene un Ciclomotor
+        /// </summary>
+        /// <returns></returns>
         public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
@@ -24,5 +33,7 @@ namespace Entidades
             
             return "CICLOMOTOR\n" + base.Mostrar() + sb.ToString();
         }
+        #endregion
+
     }
 }

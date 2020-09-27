@@ -8,6 +8,7 @@ namespace Entidades
     /// </summary>
     public sealed class Taller
     {
+        #region "Enumerados"
         public enum ETipo
         {
             Ciclomotor,
@@ -15,9 +16,12 @@ namespace Entidades
             SUV,
             Todos
         }
+        #endregion
 
+        #region Atributos
         private List<Vehiculo> vehiculos;
         private int espacioDisponible;
+        #endregion
 
         #region "Constructores"
         private Taller()
