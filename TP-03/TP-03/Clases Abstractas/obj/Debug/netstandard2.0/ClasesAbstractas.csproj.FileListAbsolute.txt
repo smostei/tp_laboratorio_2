@@ -1,0 +1,12 @@
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-03\TP-03\Clases Abstractas\bin\Debug\netstandard2.0\ClasesAbstractas.deps.json
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-03\TP-03\Clases Abstractas\bin\Debug\netstandard2.0\ClasesAbstractas.dll
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-03\TP-03\Clases Abstractas\bin\Debug\netstandard2.0\ClasesAbstractas.pdb
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-03\TP-03\Clases Abstractas\bin\Debug\netstandard2.0\Excepciones.dll
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-03\TP-03\Clases Abstractas\bin\Debug\netstandard2.0\Excepciones.pdb
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-03\TP-03\Clases Abstractas\obj\Debug\netstandard2.0\ClasesAbstractas.csprojAssemblyReference.cache
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-03\TP-03\Clases Abstractas\obj\Debug\netstandard2.0\ClasesAbstractas.AssemblyInfoInputs.cache
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-03\TP-03\Clases Abstractas\obj\Debug\netstandard2.0\ClasesAbstractas.AssemblyInfo.cs
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-03\TP-03\Clases Abstractas\obj\Debug\netstandard2.0\ClasesAbstractas.csproj.CoreCompileInputs.cache
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-03\TP-03\Clases Abstractas\obj\Debug\netstandard2.0\ClasesAbstractas.csproj.CopyComplete
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-03\TP-03\Clases Abstractas\obj\Debug\netstandard2.0\ClasesAbstractas.dll
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-03\TP-03\Clases Abstractas\obj\Debug\netstandard2.0\ClasesAbstractas.pdb

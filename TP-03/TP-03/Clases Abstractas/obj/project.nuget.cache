@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "XLMyWtEvhYeVbjQpYH1abCBSqy1lL4GarMZyGIKyBZDtOrfUd9vdtQLQup6HMt/Eurw7ByFhYfzjYBc6XJZ96w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\augus\\Desktop\\tp-laboratorio-2\\TP-03\\TP-03\\Clases Abstractas\\ClasesAbstractas.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\augus\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\augus\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

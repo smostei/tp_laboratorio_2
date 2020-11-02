@@ -1,0 +1,80 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "TP-03/1.0.0": {
+        "dependencies": {
+          "Archivos": "1.0.0",
+          "ClasesAbstractas": "1.0.0",
+          "ClasesInstanciables": "1.0.0",
+          "Excepciones": "1.0.0"
+        },
+        "runtime": {
+          "TP-03.dll": {}
+        }
+      },
+      "Archivos/1.0.0": {
+        "dependencies": {
+          "Excepciones": "1.0.0"
+        },
+        "runtime": {
+          "Archivos.dll": {}
+        }
+      },
+      "ClasesAbstractas/1.0.0": {
+        "dependencies": {
+          "Excepciones": "1.0.0"
+        },
+        "runtime": {
+          "ClasesAbstractas.dll": {}
+        }
+      },
+      "ClasesInstanciables/1.0.0": {
+        "dependencies": {
+          "Archivos": "1.0.0",
+          "ClasesAbstractas": "1.0.0",
+          "Excepciones": "1.0.0"
+        },
+        "runtime": {
+          "ClasesInstanciables.dll": {}
+        }
+      },
+      "Excepciones/1.0.0": {
+        "runtime": {
+          "Excepciones.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TP-03/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Archivos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ClasesAbstractas/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ClasesInstanciables/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Excepciones/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
