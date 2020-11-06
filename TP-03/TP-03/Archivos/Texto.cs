@@ -12,7 +12,7 @@ namespace Archivos
 
             try
             {
-                using (StreamWriter sw = new StreamWriter(archivo, false))
+                using (StreamWriter sw = new StreamWriter(archivo, true))
                 {
                     sw.WriteLine(datos);
                 }

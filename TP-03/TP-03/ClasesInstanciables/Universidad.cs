@@ -6,6 +6,7 @@ using System.Text;
 
 namespace ClasesInstanciables
 {
+    [Serializable]
     public class Universidad
     {
         public enum EClases
@@ -44,12 +45,12 @@ namespace ClasesInstanciables
         {
             get
             {
-                return Instructores;
+                return profesores;
             }
 
             set
             {
-                Instructores = value;
+                profesores = value;
             }
         }
 
@@ -213,7 +214,6 @@ namespace ClasesInstanciables
         {
             Universidad universidad = null;
             Profesor profesorDisponible = null;
-            List<Alumno> alumnosCursantes = new List<Alumno>();
 
             bool encontroProfesor = false;
 
@@ -227,18 +227,20 @@ namespace ClasesInstanciables
                 }
             }
 
-            foreach(Alumno a in u.alumnos)
-            {
-                if(a == c)
-                {
-                    alumnosCursantes.Add(a);
-                }
-            }
 
             if(encontroProfesor)
             {
                 Jornada jornada = new Jornada(c, profesorDisponible);
-                jornada.Alumnos = alumnosCursantes;
+
+                foreach (Alumno a in u.alumnos)
+                {
+                    if (a == c)
+                    {
+                        jornada += a;
+                    }
+                }
+
+                u.jornadas.Add(jornada);
                 universidad = u;
 
             } else
@@ -251,7 +253,6 @@ namespace ClasesInstanciables
 
         public static Universidad operator +(Universidad u, Alumno a)
         {
-            Universidad universidad = null;
             bool repetido = false;
 
             foreach(Alumno alumno in u.alumnos)
@@ -266,13 +267,12 @@ namespace ClasesInstanciables
             if(!repetido)
             {
                 u.alumnos.Add(a);
-                universidad = u;
             } else
             {
                 throw new AlumnoRepetidoException("Alumno repetido");
             }
 
-            return universidad;
+            return u;
         }
 
         public static Universidad operator +(Universidad u, Profesor p)

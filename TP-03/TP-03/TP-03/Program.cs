@@ -78,7 +78,6 @@ namespace TP_03
 
             uni += a8;
 
-
             //Profesores
 
             Profesor i1 = new Profesor(1, "Juan", "Lopez", "12224458",
@@ -131,6 +130,16 @@ namespace TP_03
 
             Console.ReadKey();
             Console.Clear();
+
+            try
+            {
+                Universidad.Guardar(uni);
+                Console.WriteLine("Archivo de Universidad guardado.");
+            }
+            catch(ArchivosException e)
+            {
+                Console.WriteLine(e.Message);
+            }
 
             try
             {

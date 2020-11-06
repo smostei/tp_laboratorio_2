@@ -13,7 +13,7 @@ namespace ClasesInstanciables
         private Universidad.EClases clase;
         private Profesor instructor;
 
-        private Jornada()
+        public Jornada()
         {
             alumnos = new List<Alumno>();
         }
@@ -103,7 +103,7 @@ namespace ClasesInstanciables
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine("JORNADA:");
-            sb.AppendLine(instructor.ToString());
+            sb.AppendLine($"CLASE DE {clase} POR {instructor}");
             sb.AppendLine("ALUMNOS:");
             sb.AppendLine(GetListaAlumnos());
 

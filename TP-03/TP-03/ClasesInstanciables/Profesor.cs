@@ -27,7 +27,7 @@ namespace ClasesInstanciables
 
         protected override string ParticiparEnClase()
         {
-            return $"Clases del dia: {GetClasesDelDia()}";
+            return $"CLASES DEL DÍA:\n{GetClasesDelDia()}";
         }
 
         protected override string MostrarDatos()

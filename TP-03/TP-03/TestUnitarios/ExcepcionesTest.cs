@@ -9,56 +9,33 @@ namespace TestUnitarios
     public class ExcepcionesTest
     {
         [TestMethod]
+        [ExpectedException(typeof(DniInvalidoException))]
+        public void DesencadenarDniInvalidoException()
+        {
+            //arrange
+            Alumno alumno;
+
+            //act
+            alumno = new Alumno(1, "Santiago", "Mosteiro", "411708755",
+                ClasesAbstractas.Persona.ENacionalidad.Argentino, 
+                Universidad.EClases.Laboratorio
+            );
+            
+        }
+
+        [TestMethod]
         [ExpectedException(typeof(NacionalidadInvalidaException))]
         public void DesencadenarNacionalidadInvalidaException()
         {
             //arrange
-            Alumno alumno;
-            bool hayExcepcion = false;
+            Alumno a1;
 
             //act
-            try
-            {
-                alumno = new Alumno(1, "Santiago", "Mosteiro", "9999999999",
-                     ClasesAbstractas.Persona.ENacionalidad.Argentino, Universidad.EClases.Laboratorio);
-            }
-            catch(NacionalidadInvalidaException e)
-            {
-                hayExcepcion = true;
-            }
+            a1 = new Alumno(1, "Juan", "Lopez", "80000000",
+                    ClasesAbstractas.Persona.ENacionalidad.Extranjero, Universidad.EClases.Programacion,
+                    Alumno.EEstadoCuenta.Becado
+                 );
 
-            //assert
-            Assert.IsTrue(hayExcepcion);
-        }
-
-        public void DesencadenarSinProfesorException()
-        {
-            //arrange
-            bool hayExcepcion = false;
-            Universidad uni = new Universidad();
-
-            Alumno a1 = new Alumno(1, "Juan", "Lopez", "41170875",
-                ClasesAbstractas.Persona.ENacionalidad.Argentino, Universidad.EClases.Programacion,
-                Alumno.EEstadoCuenta.Becado);
-
-            uni += a1;
-
-            Alumno a2 = new Alumno(1, "Juan", "Lopez", "41170875",
-                ClasesAbstractas.Persona.ENacionalidad.Argentino, Universidad.EClases.Programacion,
-                Alumno.EEstadoCuenta.Becado);
-
-            //act
-            try
-            {
-                uni += a2;
-            }
-            catch (AlumnoRepetidoException e)
-            {
-                hayExcepcion = true;
-            }
-
-            //assert
-            Assert.IsTrue(hayExcepcion);
         }
     }
 }

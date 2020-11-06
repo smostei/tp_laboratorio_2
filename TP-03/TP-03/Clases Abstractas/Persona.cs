@@ -79,7 +79,7 @@ namespace ClasesAbstractas
         {
             get
             {
-                if(ValidarDni(nacionalidad, dni) != 1)
+                if(ValidarDni(nacionalidad, dni) != 0)
                 {
                     return dni;
                 }
@@ -89,7 +89,7 @@ namespace ClasesAbstractas
             
             set
             {
-                if(ValidarDni(nacionalidad, value) != 1)
+                if(ValidarDni(nacionalidad, value) != 0)
                 {
                     dni = value;
                 }
@@ -123,7 +123,7 @@ namespace ClasesAbstractas
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine($"NOMRE COMPLETO: {apellido}, {nombre}");
+            sb.AppendLine($"NOMBRE COMPLETO: {apellido}, {nombre}");
             sb.AppendLine($"NACIONALIDAD: {nacionalidad}");
 
             return sb.ToString();
@@ -136,7 +136,7 @@ namespace ClasesAbstractas
                 throw new DniInvalidoException("La longitud del DNI no coincide");
             }
 
-            bool dniValido;
+            bool dniValido = false;
 
             if(nacionalidad == ENacionalidad.Argentino)
             {
@@ -146,7 +146,12 @@ namespace ClasesAbstractas
                 dniValido = dato >= 90000000 && dato <= 99999999;
             }
 
-            int retorno = dniValido ? dato : 1;
+            int retorno = dniValido ? dato : 0;
+
+            if(retorno == 0)
+            {
+                throw new NacionalidadInvalidaException("La nacionalidad no se condice con el número de DNI");
+            }
 
             return retorno;
         }
