@@ -13,7 +13,7 @@ namespace ClasesInstanciables
         private Universidad.EClases clase;
         private Profesor instructor;
 
-        public Jornada()
+        private Jornada()
         {
             alumnos = new List<Alumno>();
         }
