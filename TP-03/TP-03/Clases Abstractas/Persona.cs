@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Text;
-using System.Xml.Serialization;
-using Clases_Abstractas;
 using Excepciones;
 
 namespace ClasesAbstractas
@@ -75,6 +73,10 @@ namespace ClasesAbstractas
             }
         }
 
+        /// <summary>
+        /// Al obtener o settear el dni, se validará que sea correcto
+        /// throws NacionalidadInvalidaException
+        /// </summary>
         public int DNI
         {
             get
@@ -119,6 +121,10 @@ namespace ClasesAbstractas
             }
         }
 
+        /// <summary>
+        /// Pasa a un string el objeto Persona
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
@@ -129,6 +135,14 @@ namespace ClasesAbstractas
             return sb.ToString();
         }
 
+        /// <summary>
+        /// validara el dni a traves del numero dado y su nacionalidad
+        /// throws DniInvalidoException
+        /// throws NacionalidadInvalidaException
+        /// </summary>
+        /// <param name="nacionalidad">nacionalidad de la persona: Argentino / Extranjero</param>
+        /// <param name="dato">dni de la persona</param>
+        /// <returns>retorna el dni, o 0 en caso de no haber sido un dni valido (en este caso devuelve la excepcion necesaria)</returns>
         private int ValidarDni(ENacionalidad nacionalidad, int dato)
         {
             if(dato.ToString().Length > 8)
@@ -156,6 +170,10 @@ namespace ClasesAbstractas
             return retorno;
         }
 
+        /// <summary>
+        /// Sobrecarga del metodo ValidarDni para que pueda admitir el dni como string
+        /// </summary>
+        /// <returns>retorna el dni, o 0 si no se pudo cargar (excepcion)</returns>
         private int ValidarDni(ENacionalidad nacionalidad, string dato)
         {
             int.TryParse(dato, out int auxDni);

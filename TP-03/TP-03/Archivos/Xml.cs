@@ -1,6 +1,5 @@
 ﻿using Excepciones;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Xml;
@@ -10,7 +9,12 @@ namespace Archivos
 {
     public class Xml<T> : IArchivo<T>
     {
-
+        /// <summary>
+        /// guarda cualquier tipo de objeto en un archivo xml
+        /// </summary>
+        /// <param name="archivo">path del file</param>
+        /// <param name="datos">objeto generico en el cual almacenaremos la info en el xml</param>
+        /// <returns>true en caso de poder generar el archivo / false en el caso contrario</returns>
         public bool Guardar(string archivo, T datos)
         {
             bool retorno = false;
@@ -33,6 +37,12 @@ namespace Archivos
             return retorno;
         }
 
+        /// <summary>
+        /// lectura del archivo xml para almacenar la informacion en un objeto
+        /// </summary>
+        /// <param name="archivo">path del file</param>
+        /// <param name="datos">direccion de memoria del objeto generico, el cual almacenara la info</param>
+        /// <returns>true en caso de haber recuperado la informacion del archivo / false en caso contrario</returns>
         public bool Leer(string archivo, out T datos)
         {
             bool retorno = false;

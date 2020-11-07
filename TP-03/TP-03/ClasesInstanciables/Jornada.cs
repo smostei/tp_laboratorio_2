@@ -63,6 +63,11 @@ namespace ClasesInstanciables
             }
         }
 
+        /// <summary>
+        /// metodo que guarda en un archivo de texto la jornada de la clase.
+        /// </summary>
+        /// <param name="jornada">la jornada a guardar en el archivo</param>
+        /// <returns></returns>
         public static bool Guardar(Jornada jornada)
         {
             bool retorno = false;
@@ -81,6 +86,10 @@ namespace ClasesInstanciables
             return retorno;
         }
 
+        /// <summary>
+        /// metodo que se usara para almacenar la informacion de un archivo de texto en un objeto de tipo string
+        /// </summary>
+        /// <returns>el objeto con la informacion del archivo en string</returns>
         public static string Leer()
         {
             string datosALeer = string.Empty;
@@ -98,6 +107,10 @@ namespace ClasesInstanciables
             return datosALeer;
         }
 
+        /// <summary>
+        /// Informacion de la jornada (clase, profesor y alumnos)
+        /// </summary>
+        /// <returns>string con la info completa de una jornada</returns>
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
@@ -107,11 +120,17 @@ namespace ClasesInstanciables
             sb.AppendLine("ALUMNOS:");
             sb.AppendLine(GetListaAlumnos());
 
-            sb.AppendLine("\n<------------------------------------------------------->\n");
+            sb.AppendLine("<------------------------------------------------------->");
 
             return sb.ToString();
         }
 
+        /// <summary>
+        /// una jornada sera igual a un alumno cuando él mismo participe de ella.
+        /// </summary>
+        /// <param name="j">jornada a la cual se quiere saber si hay cierto alumno</param>
+        /// <param name="a">alumno probablemente en la jornada</param>
+        /// <returns>true si el alumno participa de la jornada, false en caso contrario</returns>
         public static bool operator ==(Jornada j, Alumno a)
         {
             bool retorno = false;
@@ -133,6 +152,12 @@ namespace ClasesInstanciables
             return !(j == a);
         }
 
+        /// <summary>
+        /// un alumno sera agregado a la jornada siempre y cuando no esté en la misma
+        /// </summary>
+        /// <param name="j">jornada a la cual se quiere agregar el alumno</param>
+        /// <param name="a">alumno que se quiere agregar a la jornada</param>
+        /// <returns>la jornada en caso de que no se haya repetido el alumno, null en caso contrario</returns>
         public static Jornada operator +(Jornada j, Alumno a)
         {
             Jornada retorno = null;
@@ -146,11 +171,19 @@ namespace ClasesInstanciables
             return retorno;
         }
 
+        /// <summary>
+        /// metodo que simplemente devuelve la ruta del archivo del cual queremos almacenar/leer la info de la jornada
+        /// </summary>
+        /// <returns>path del file</returns>
         private static string GetRutaArchivo()
         {
             return AppDomain.CurrentDomain.BaseDirectory + "Jornada.txt";
         }
 
+        /// <summary>
+        /// metodo para hacer mas eficaz la conversion de la lista de alumnos a string
+        /// </summary>
+        /// <returns>string con los alumnos que estan en la jornada</returns>
         private string GetListaAlumnos()
         {
             StringBuilder sb = new StringBuilder();

@@ -25,11 +25,19 @@ namespace ClasesInstanciables
             _randomClases();
         }
 
+        /// <summary>
+        /// override de universitario, el profesor participa de la clase dando la misma.
+        /// </summary>
+        /// <returns>string con la info del profesor dando las clases</returns>
         protected override string ParticiparEnClase()
         {
             return $"CLASES DEL DÍA:\n{GetClasesDelDia()}";
         }
 
+        /// <summary>
+        /// informacion del profesor que va a ser leida desde el ToString
+        /// </summary>
+        /// <returns></returns>
         protected override string MostrarDatos()
         {
             return base.MostrarDatos() + ParticiparEnClase();
@@ -49,10 +57,14 @@ namespace ClasesInstanciables
         /// </summary>
         private void _randomClases()
         {
-            clasesDelDia.Enqueue((Universidad.EClases) random.Next(0, 3));
-            clasesDelDia.Enqueue((Universidad.EClases) random.Next(0, 3));
+            clasesDelDia.Enqueue((Universidad.EClases) random.Next(0, 4));
+            clasesDelDia.Enqueue((Universidad.EClases) random.Next(0, 4));
         }
 
+        /// <summary>
+        /// metodo que hace mas eficaz la conversion de las clases que da un profesor a una cadena
+        /// </summary>
+        /// <returns>string de las clases que toma cada profesor</returns>
         private string GetClasesDelDia()
         {
             StringBuilder sb = new StringBuilder();
@@ -65,6 +77,12 @@ namespace ClasesInstanciables
             return sb.ToString();
         }
 
+        /// <summary>
+        /// un profesor va a ser igual a una clase si él mismo comparte la clase que da con la pasada por parametro
+        /// </summary>
+        /// <param name="p">profesor del cual queremos saber si da cierta clase</param>
+        /// <param name="clase">la clase que queremos saber si la da cierto profesor</param>
+        /// <returns>true si el profesor da esa clase, false en caso contrario</returns>
         public static bool operator ==(Profesor p, Universidad.EClases clase)
         {
             bool retorno = false;

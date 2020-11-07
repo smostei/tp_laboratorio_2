@@ -16,13 +16,28 @@ namespace Clases_Abstractas
             this.legajo = legajo;
         }
 
+        /// <summary>
+        /// metodo encapsulado que sera llamado por el ToString para mostrar la informacion del Universitario
+        /// </summary>
+        /// <returns>Informacion del universitario</returns>
         protected virtual string MostrarDatos()
         {
             return base.ToString() + $"LEGAJO NÚMERO: {legajo}\n";
         }
 
+        /// <summary>
+        /// este metodo será implementado por las clases hijas (Alumno y Profesor) para establecer un comportamiento distinto
+        /// mediante el cual el universitario participara en la clase
+        /// </summary>
+        /// <returns></returns>
         protected abstract string ParticiparEnClase();
 
+        /// <summary>
+        /// Un universitario sera igual a otro en caso de que el LEGAJO o el DNI se compartan
+        /// </summary>
+        /// <param name="u1">primer universitario a comparar</param>
+        /// <param name="u2">segundo universitario a comparar</param>
+        /// <returns>true si es igual, false en caso contrario</returns>
         public static bool operator ==(Universitario u1, Universitario u2)
         {
             bool retorno = false;
