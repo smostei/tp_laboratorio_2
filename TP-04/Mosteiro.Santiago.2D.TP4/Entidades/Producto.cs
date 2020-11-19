@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace Entidades
 {
@@ -55,6 +56,11 @@ namespace Entidades
         public static bool operator !=(Producto producto, List<Producto> listaProductos)
         {
             return !(producto == listaProductos);
+        }
+
+        public override string ToString()
+        {
+            return $"Stock Disponible: {stockDisponible}\n" + base.ToString();
         }
 
     }

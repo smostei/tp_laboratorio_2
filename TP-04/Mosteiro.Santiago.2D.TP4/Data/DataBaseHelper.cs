@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 using Entidades;
 using Excepciones;
 
-namespace TP4
+namespace Data
 {
     public static class DataBaseHelper
     {
@@ -32,15 +32,15 @@ namespace TP4
 
                 sqlConnection.Open();
                 command.ExecuteNonQuery();
-            } 
-            catch(SqlException e)
+            }
+            catch (SqlException e)
             {
                 response = false;
                 throw new ProductoRepetidoException("Ya existe un producto con el mismo nombre");
             }
             finally
             {
-                if(!(sqlConnection is null) && sqlConnection.State == System.Data.ConnectionState.Open)
+                if (!(sqlConnection is null) && sqlConnection.State == System.Data.ConnectionState.Open)
                 {
                     sqlConnection.Close();
                 }
@@ -66,7 +66,7 @@ namespace TP4
                 sqlConnection.Open();
                 command.ExecuteNonQuery();
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 response = false;
                 Console.WriteLine(e.Message);
@@ -134,12 +134,12 @@ namespace TP4
                     int id = (int)reader["Id"];
                     string nombre = (string)reader["Nombre"];
                     ProductoItem.TipoProducto tipo = (Producto.TipoProducto)Enum.Parse(typeof(Producto.TipoProducto), (string)reader["Tipo"]);
-                    float precio = ((float) (double) reader["Precio"]);
+                    float precio = ((float)(double)reader["Precio"]);
                     if (listaItems is List<Producto>)
                     {
                         int stock = (int)reader["StockDisponible"];
                         item = new Producto(id, nombre, tipo, precio, stock);
-                    } 
+                    }
                     else
                     {
                         item = new ProductoItem(id, nombre, tipo, precio);
@@ -237,7 +237,7 @@ namespace TP4
         {
             string query;
 
-            if(listaItems.GetType() == typeof(List<ProductoItem>))
+            if (listaItems.GetType() == typeof(List<ProductoItem>))
             {
                 query = "SELECT * FROM ProductosVendidos";
             }
@@ -253,11 +253,12 @@ namespace TP4
         {
             string query = string.Empty;
 
-            if(item.GetType() == typeof(ProductoItem))
+            if (item.GetType() == typeof(ProductoItem))
             {
                 query = "INSERT INTO ProductosVendidos (Nombre, Tipo, Precio) values " +
                     "(@nombre, @tipo, @precio)";
-            } else
+            }
+            else
             {
                 query = "INSERT INTO Productos (Nombre, Tipo, Precio, StockDisponible) values " +
                     "(@nombre, @tipo, @precio, @stockDisponible)";
@@ -268,7 +269,7 @@ namespace TP4
             command.Parameters.AddWithValue("tipo", item.Tipo.ToString());
             command.Parameters.Add(new SqlParameter("@precio", item.Precio));
 
-            if(item is Producto)
+            if (item is Producto)
             {
                 command.Parameters.AddWithValue("stockDisponible", (item as Producto).StockDisponible);
             }

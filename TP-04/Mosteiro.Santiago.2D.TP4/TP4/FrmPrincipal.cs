@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using Entidades;
 using Excepciones;
 using Archivos;
+using Data;
 
 namespace TP4
 {

@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Archivos", "Archivos\Archiv
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Excepciones", "Excepciones\Excepciones.csproj", "{87412981-D6AD-451E-92D7-26E4E14E3392}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepasoGeneralFeatures", "RepasoGeneralFeatures\RepasoGeneralFeatures.csproj", "{729B598A-2078-4450-AB8D-B4DA0530AF01}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepasoGeneralFeatures", "RepasoGeneralFeatures\RepasoGeneralFeatures.csproj", "{729B598A-2078-4450-AB8D-B4DA0530AF01}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUnitariosVentas", "TestUnitariosVentas\TestUnitariosVentas.csproj", "{D7A67C48-3A44-45D3-888C-416FF5CCB622}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{04F2E65B-A5FF-4F79-A722-7A87B360B3FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{D7A67C48-3A44-45D3-888C-416FF5CCB622}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7A67C48-3A44-45D3-888C-416FF5CCB622}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7A67C48-3A44-45D3-888C-416FF5CCB622}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04F2E65B-A5FF-4F79-A722-7A87B360B3FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04F2E65B-A5FF-4F79-A722-7A87B360B3FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04F2E65B-A5FF-4F79-A722-7A87B360B3FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04F2E65B-A5FF-4F79-A722-7A87B360B3FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataBaseHelper.cs" />
     <Compile Include="FrmListadoProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +110,10 @@
     <ProjectReference Include="..\Archivos\Archivos.csproj">
       <Project>{f1ef8d09-8bcd-4b4f-a294-d9498c69516a}</Project>
       <Name>Archivos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Data\Data.csproj">
+      <Project>{04f2e65b-a5ff-4f79-a722-7a87b360b3fb}</Project>
+      <Name>Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\Entidades\Entidades.csproj">
       <Project>{e59a2193-8ad7-4cd1-b9ef-3705e20c44e8}</Project>
