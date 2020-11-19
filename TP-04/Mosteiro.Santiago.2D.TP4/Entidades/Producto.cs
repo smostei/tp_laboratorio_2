@@ -1,74 +1,27 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Entidades
 {
-    public class Producto
+    [Serializable]
+    public sealed class Producto : ProductoItem
     {
-        public enum TipoProducto
-        {
-            Limpieza,
-            Comida,
-            Bebida
-        }
 
-        private int id;
-        private string nombre;
-        private TipoProducto tipo;
         private int stockDisponible;
-        private double precio;
-
-        public Producto(string nombre, TipoProducto tipo, int stockDisponible, double precio)
-        {
-            this.nombre = nombre;
-            this.tipo = tipo;
-            this.stockDisponible = stockDisponible;
-            this.precio = precio;
-        }
-
-        public Producto(int id, string nombre, TipoProducto tipo, int stockDisponible, double precio)
-           : this(nombre, tipo, stockDisponible, precio)
-        {
-            this.id = id;
-        }
-
-        public int Id
-        {
-            get
-            {
-                return id;
-            }
-
-            set
-            {
-                id = value;
-            }
-        }
-
-        public string Nombre
-        {
-            get
-            {
-                return nombre;
-            }
-
-            set
-            {
-                nombre = value;
-            }
-        }
         
-        public TipoProducto Tipo
+        public Producto(int id, string nombre, TipoProducto tipo, float precio, int stockDisponible)
+            : base(id, nombre, tipo, precio)
         {
-            get
-            {
-                return tipo;
-            }
-
-            set
-            {
-                tipo = value;
-            }
+            this.stockDisponible = stockDisponible;
         }
+
+        public Producto(string nombre, TipoProducto tipo, float precio, int stockDisponible)
+            : base(nombre, tipo, precio)
+        {
+            this.stockDisponible = stockDisponible;
+        }
+
+        public Producto() { }
 
         public int StockDisponible
         {
@@ -83,17 +36,26 @@ namespace Entidades
             }
         }
 
-        public double Precio
+        public static bool operator ==(Producto producto, List<Producto> listaProductos)
         {
-            get
+            bool response = false;
+
+            foreach (ProductoItem p in listaProductos)
             {
-                return precio;
+                if (producto.Nombre == p.Nombre)
+                {
+                    response = true;
+                    break;
+                }
             }
 
-            set
-            {
-                precio = value;
-            }
-        } 
+            return response;
+        }
+
+        public static bool operator !=(Producto producto, List<Producto> listaProductos)
+        {
+            return !(producto == listaProductos);
+        }
+
     }
 }

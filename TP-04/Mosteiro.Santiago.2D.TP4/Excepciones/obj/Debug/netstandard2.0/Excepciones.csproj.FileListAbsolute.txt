@@ -1,0 +1,9 @@
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-04\Mosteiro.Santiago.2D.TP4\Excepciones\bin\Debug\netstandard2.0\Excepciones.deps.json
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-04\Mosteiro.Santiago.2D.TP4\Excepciones\bin\Debug\netstandard2.0\Excepciones.dll
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-04\Mosteiro.Santiago.2D.TP4\Excepciones\bin\Debug\netstandard2.0\Excepciones.pdb
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-04\Mosteiro.Santiago.2D.TP4\Excepciones\obj\Debug\netstandard2.0\Excepciones.csprojAssemblyReference.cache
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-04\Mosteiro.Santiago.2D.TP4\Excepciones\obj\Debug\netstandard2.0\Excepciones.AssemblyInfoInputs.cache
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-04\Mosteiro.Santiago.2D.TP4\Excepciones\obj\Debug\netstandard2.0\Excepciones.AssemblyInfo.cs
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-04\Mosteiro.Santiago.2D.TP4\Excepciones\obj\Debug\netstandard2.0\Excepciones.csproj.CoreCompileInputs.cache
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-04\Mosteiro.Santiago.2D.TP4\Excepciones\obj\Debug\netstandard2.0\Excepciones.dll
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-04\Mosteiro.Santiago.2D.TP4\Excepciones\obj\Debug\netstandard2.0\Excepciones.pdb

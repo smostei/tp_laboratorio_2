@@ -11,3 +11,10 @@ C:\Users\augus\Desktop\tp-laboratorio-2\TP-04\Mosteiro.Santiago.2D.TP4\TP4\obj\D
 C:\Users\augus\Desktop\tp-laboratorio-2\TP-04\Mosteiro.Santiago.2D.TP4\TP4\bin\Debug\Entidades.dll
 C:\Users\augus\Desktop\tp-laboratorio-2\TP-04\Mosteiro.Santiago.2D.TP4\TP4\bin\Debug\Entidades.pdb
 C:\Users\augus\Desktop\tp-laboratorio-2\TP-04\Mosteiro.Santiago.2D.TP4\TP4\obj\Debug\TP4.FrmPrincipal.resources
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-04\Mosteiro.Santiago.2D.TP4\TP4\bin\Debug\Archivos.dll
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-04\Mosteiro.Santiago.2D.TP4\TP4\bin\Debug\Excepciones.dll
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-04\Mosteiro.Santiago.2D.TP4\TP4\bin\Debug\Archivos.pdb
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-04\Mosteiro.Santiago.2D.TP4\TP4\bin\Debug\Excepciones.pdb
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-04\Mosteiro.Santiago.2D.TP4\TP4\obj\Debug\TP4.FrmListadoProductos.resources
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-04\Mosteiro.Santiago.2D.TP4\TP4\obj\Debug\TP4.FrmNuevoProducto.resources
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-04\Mosteiro.Santiago.2D.TP4\TP4\obj\Debug\TP4.FrmNuevaVenta.resources

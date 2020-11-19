@@ -1,0 +1,19 @@
+ID: 4
+Nombre: Pan Lactal
+Tipo: Comida
+Precio: 46,7
+--------------------------------
+
+ID: 5
+Nombre: Coca Cola
+Tipo: Bebida
+Precio: 705
+--------------------------------
+
+ID: 6
+Nombre: Pepsi
+Tipo: Bebida
+Precio: 50,6
+--------------------------------
+
+
