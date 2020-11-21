@@ -7,11 +7,16 @@ using Entidades;
 using Excepciones;
 using Archivos;
 using Data;
+using System.Threading;
 
 namespace TP4
 {
+    public delegate void delActualizarTxtBoxAnimacion(int x);
+    public delegate void delMostrarMensaje(string mensaje);
+
     public partial class FrmPrincipal : Form
     {
+        private Thread threadAnimacion;
         private List<ProductoItem> listaVentas;
 
         public FrmPrincipal()
@@ -36,6 +41,11 @@ namespace TP4
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
+            //seteo la locación del titulo en 0x,56y para ir avanzando con la animacion
+            tituloVentasLbl.Location = new Point(0, 56);
+            threadAnimacion = new Thread(EmpezarAnimacionVentas);
+            threadAnimacion.Start();
+
             SetupFormPrincipal(DataBaseHelper.GetListaItems<ProductoItem>());
         }
     
@@ -76,6 +86,11 @@ namespace TP4
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question) == DialogResult.Yes)
             {
+                if(threadAnimacion.IsAlive)
+                {
+                    threadAnimacion.Abort();
+                }
+
                 Close();
             }
         }
@@ -126,7 +141,11 @@ namespace TP4
 
         private void verProductosDisponiblesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new FrmListadoProductos().Show();
+
+            FrmListadoProductos formProductos = new FrmListadoProductos();
+            formProductos.enviarMensaje += formProductos.MostrarMensaje;
+
+            formProductos.Show();
         }
 
         private void MostrarMensajeError(string mensaje, string titulo)
@@ -194,6 +213,35 @@ namespace TP4
                     "Error archivo XML"
                 );
             }
+        }
+
+        //Va a ser ejecutado cuando el hilo que apunta a este metodo arranque con su metodo Start
+        private void EmpezarAnimacionVentas()
+        {
+            int posicionXInicial = 0;
+
+            while (posicionXInicial < 294)
+            {
+                Thread.Sleep(20);
+
+                delActualizarTxtBoxAnimacion delegadoActualizarTxt = new delActualizarTxtBoxAnimacion(ActualizarEjeXTituloVentas);
+
+                if(tituloVentasLbl.InvokeRequired)
+                {
+                    tituloVentasLbl.BeginInvoke(delegadoActualizarTxt, posicionXInicial);
+                } else
+                {
+                    ActualizarEjeXTituloVentas(posicionXInicial);
+                }
+
+                posicionXInicial++;
+            }
+
+        }
+
+        private void ActualizarEjeXTituloVentas(int x)
+        {
+            tituloVentasLbl.Location = new Point(x, 56);
         }
 
     }

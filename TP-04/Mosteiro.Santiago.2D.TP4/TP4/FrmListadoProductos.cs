@@ -13,6 +13,9 @@ namespace TP4
 {
     public partial class FrmListadoProductos : Form
     {
+        private const string MENSAJE = "Bienvenido, estos son los productos disponibles!";
+        public event delMostrarMensaje enviarMensaje;
+
         public FrmListadoProductos()
         {
             InitializeComponent();
@@ -20,6 +23,8 @@ namespace TP4
 
         private void FrmListadoProductos_Load(object sender, EventArgs e)
         {
+            enviarMensaje.Invoke(MENSAJE);
+
             AlternarColorFilasDataGrid(dataGridProductos);
             dataGridProductos.DataSource = DataBaseHelper.GetListaItems<Producto>();
         }
@@ -28,6 +33,16 @@ namespace TP4
         {
             dataGrid.RowsDefaultCellStyle.BackColor = Color.LightBlue;
             dataGrid.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
+        }
+
+        public void MostrarMensaje(string mensaje)
+        {
+            MessageBox.Show(
+              mensaje,
+              "Productos disponibles",
+              MessageBoxButtons.OK,
+              MessageBoxIcon.Information
+            );
         }
     }
 }

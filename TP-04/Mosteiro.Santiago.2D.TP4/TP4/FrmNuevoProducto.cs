@@ -19,7 +19,7 @@ namespace TP4
         {
             InitializeComponent();
         }
-        
+
         private void FrmNuevoProducto_Load(object sender, EventArgs e)
         {
             cmbTipoProductos.DataSource = Enum.GetValues(typeof(ProductoItem.TipoProducto));
