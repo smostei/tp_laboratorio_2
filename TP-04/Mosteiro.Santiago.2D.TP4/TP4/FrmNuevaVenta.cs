@@ -31,11 +31,13 @@ namespace TP4
             dataGrid.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
         }
 
-        private void ventaButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        /// <summary>
+        /// Cuando se haga doble click en algún elemento del datagrid, se mappeara un objeto de tipo producto a un productoItem,
+        /// de esa forma, insertaremos el registro de un productoItem a la tabla ProductosVendidos, y le actualizamos el stock
+        /// de ese producto al producto que fue vendido.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dataGridProductos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             Producto p = (Producto)dataGridProductos.CurrentRow.DataBoundItem;

@@ -24,6 +24,9 @@ namespace TP4
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Esta property me va a servir dentro de este form para devolver las ventas realizadas en un string
+        /// </summary>
         private string ListaVentas
         {
             get
@@ -46,6 +49,7 @@ namespace TP4
             threadAnimacion = new Thread(EmpezarAnimacionVentas);
             threadAnimacion.Start();
 
+            //Mientras el hilo de la animación arrancó, en el principal setteamos la lista al datagrid
             SetupFormPrincipal(DataBaseHelper.GetListaItems<ProductoItem>());
         }
     
@@ -86,15 +90,14 @@ namespace TP4
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if(threadAnimacion.IsAlive)
-                {
-                    threadAnimacion.Abort();
-                }
-
                 Close();
             }
         }
 
+        /// <summary>
+        /// Actualiza la lista de ventas que tenemos como atributo en este form con el DataBaseHelper
+        /// </summary>
+        /// <param name="listaVentas">información a settearle a la lista de ventas</param>
         private void RefrescarListaVentas(List<ProductoItem> listaVentas)
         {
             ventasGridView.DataSource = null;
@@ -102,12 +105,20 @@ namespace TP4
             this.listaVentas = listaVentas;
         }
 
+        /// <summary>
+        /// Metodo que sirve para alternar los colores del datagridview
+        /// </summary>
+        /// <param name="dataGrid">datagrid que va a alternar sus filas con colores</param>
         private void AlternarColorFilasDataGrid(DataGridView dataGrid)
         {
             dataGrid.RowsDefaultCellStyle.BackColor = Color.LightBlue;
             dataGrid.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
         }
 
+        /// <summary>
+        /// Metodo que hace un setup del formulario con la data que tenemos en el momento
+        /// </summary>
+        /// <param name="listaVentas">lista de ventas que necesitamos para establecer el setup</param>
         private void SetupFormPrincipal(List<ProductoItem> listaVentas)
         {
             bool hayVentas = listaVentas.Count > 0;
@@ -118,7 +129,6 @@ namespace TP4
                 AlternarColorFilasDataGrid(ventasGridView);
             }
 
-            tituloVentasLbl.Visible = hayVentas;
             emptyStateLbl.Visible = !hayVentas;
             ventasXmlButton.Enabled = hayVentas;
             ventasTxtButton.Enabled = hayVentas;
@@ -170,6 +180,11 @@ namespace TP4
 
         }
 
+        /// <summary>
+        /// Guarda en un archivo txt las ventas actuales
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ventasTxtButton_Click(object sender, EventArgs e)
         {
             ArchivoTexto archivo = new ArchivoTexto();
@@ -193,6 +208,11 @@ namespace TP4
             }
         }
 
+        /// <summary>
+        /// Guarda en un archivo XML las ventas actuales
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param
         private void ventasXmlButton_Click(object sender, EventArgs e)
         {
             ArchivoXml<List<ProductoItem>> archivo = new ArchivoXml<List<ProductoItem>>();
@@ -215,7 +235,9 @@ namespace TP4
             }
         }
 
-        //Va a ser ejecutado cuando el hilo que apunta a este metodo arranque con su metodo Start
+        /// <summary>
+        /// Metodo que apunta al thread de la animacion, va ser ejecutado cuando este arranque con su metodo Start
+        /// </summary>
         private void EmpezarAnimacionVentas()
         {
             int posicionXInicial = 0;
@@ -239,10 +261,26 @@ namespace TP4
 
         }
 
+        /// <summary>
+        /// Metodo que va a ejecutar el delegado para actualizar el eje X del titulo de ventas
+        /// </summary>
+        /// <param name="x"></param>
         private void ActualizarEjeXTituloVentas(int x)
         {
             tituloVentasLbl.Location = new Point(x, 56);
         }
 
+        /// <summary>
+        /// Cuando el formulario se cierre, si tenemos el hilo vivo, vamos a finalizar el proceso
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FrmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(threadAnimacion.IsAlive)
+            {
+                threadAnimacion.Abort();
+            }
+        }
     }
 }

@@ -72,6 +72,10 @@ namespace TP4
 
         }
 
+        /// <summary>
+        /// booleano que determina la activacion del botón para agregar el producto a la tabla Productos.
+        /// </summary>
+        /// <returns></returns>
         private bool activarBotonContinuar()
         {
             return !(
@@ -82,11 +86,21 @@ namespace TP4
             );
         }
 
+        /// <summary>
+        /// Este listener se va a triggerear cada vez que cualquiera de las vistas actualice su texto
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void oyenteTextosCambiados(object sender, EventArgs e)
         {
             agregarButton.Enabled = activarBotonContinuar();
         }
 
+        /// <summary>
+        /// Este listener se va a triggerear cada vez que cualquiera de las vistas salga de su foco
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void oyenteFocoSalidaTextos(object sender, EventArgs e)
         {
             ((TextBox)sender).Text = ((TextBox)sender).Text.Trim();

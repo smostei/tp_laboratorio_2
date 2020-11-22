@@ -73,6 +73,10 @@ namespace Archivos
             return retorno;
         }
 
+        /// <summary>
+        /// Devuelve la ruta del archivo en la que se va a estar guardando el XML
+        /// </summary>
+        /// <returns>path del file con su nombre</returns>
         public string RutaArchivo()
         {
             return AppDomain.CurrentDomain.BaseDirectory + "VentasXML-" + DateTime.Now.FechaActualFormateada() + ".xml";

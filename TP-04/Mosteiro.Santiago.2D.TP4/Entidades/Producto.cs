@@ -37,6 +37,12 @@ namespace Entidades
             }
         }
 
+        /// <summary>
+        /// Un producto va a ser igual a una lista de productos si el mismo se encuenta en ella
+        /// </summary>
+        /// <param name="producto">producto a comparar</param>
+        /// <param name="listaProductos">lista contra la que vamos a comparar</param>
+        /// <returns>true en caso de que el producto se esté en la lista, false en caso contrario</returns>
         public static bool operator ==(Producto producto, List<Producto> listaProductos)
         {
             bool response = false;

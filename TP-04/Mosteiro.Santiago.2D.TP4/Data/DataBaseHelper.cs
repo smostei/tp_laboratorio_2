@@ -21,6 +21,13 @@ namespace Data
             command.Connection = sqlConnection;
         }
 
+        /// <summary>
+        /// Agrega un nuevo elemento a la tabla Productos o ProductosVendidos dependiendo el tipo
+        /// throw ProductoRepetidoException
+        /// </summary>
+        /// <typeparam name="T">parametro generico que puede ser un ProductoItem o Producto</typeparam>
+        /// <param name="item">el objeto generico que se va a insertar a la tabla de la DB</param>
+        /// <returns>true en caso de poder agregarse a la tabla, false en caso contrario</returns>
         public static bool InsertarItem<T>(T item) where T : ProductoItem
         {
             bool response = true;
@@ -49,6 +56,12 @@ namespace Data
             return response;
         }
 
+        /// <summary>
+        /// Actualiza el stock de un registro en la tabla Productos
+        /// </summary>
+        /// <typeparam name="nuevoStock">el nuevo stock que quiero para el producto</typeparam>
+        /// <param name="idProducto">el criterio por el cual vamos a hacer la query</param>
+        /// <returns>true en caso de poder actualizarse el registro, false en caso contrario</returns>
         public static bool ActualizarStockProducto(int nuevoStock, int idProducto)
         {
             bool response = true;
@@ -82,6 +95,12 @@ namespace Data
             return response;
         }
 
+        /// <summary>
+        /// Actualiza el stock de un registro en la tabla Productos
+        /// </summary>
+        /// <typeparam name="nuevoStock">el nuevo stock que quiero para el producto</typeparam>
+        /// <param name="nombreProducto">el criterio por el cual vamos a hacer la query (esta vez va a ser el nombre)</param>
+        /// <returns>true en caso de poder actualizarse el registro, false en caso contrario</returns>
         public static bool ActualizarStockProducto(int nuevoStock, string nombreProducto)
         {
             bool response = true;
@@ -115,6 +134,12 @@ namespace Data
             return response;
         }
 
+        /// <summary>
+        /// Consulta que haremos para obtener la lista de items (pueden ser Productos o ProductosVendidos)
+        /// </summary>
+        /// <typeparam name="T">generico por el cual limitamos la query, puede ser un Producto o un ProductoItem</typeparam>
+        /// <param name="stockItems">true -> devuelve los objetos que tienen stock mayor a 0, por defecto esta en false, funciona solo con los Productos</param>
+        /// <returns>una lista con los items que necesitemos</returns>
         public static List<T> GetListaItems<T>(bool stockItems = false) where T : ProductoItem
         {
             List<T> listaItems = new List<T>();
@@ -163,6 +188,12 @@ namespace Data
             return listaItems;
         }
 
+        /// <summary>
+        /// Elimina un registro de la tabla seleccionada (se está usando para los tests)
+        /// </summary>
+        /// <param name="nombreProducto">el nombre de producto a eliminar</param>
+        /// <param name="tablaProductos">por defecto esta en true, si lo setteamos en false, estaríamos eliminando el item de ProductosVendidos</param>
+        /// <returns>true en caso de eliminar el producto, false en caso contrario</returns>
         public static bool EliminarProducto(string nombreProducto, bool tablaProductos = true)
         {
             bool response = true;
@@ -196,6 +227,11 @@ namespace Data
             return response;
         }
 
+        /// <summary>
+        /// Una query que obtiene un producto por su nombre
+        /// </summary>
+        /// <param name="nombreProducto">criterio por el cual se realiza la request</param>
+        /// <returns>El producto bajo el criterio dado</returns>
         public static Producto GetProductoPorNombre(string nombreProducto)
         {
             Producto productoResponse = null;
@@ -234,6 +270,13 @@ namespace Data
             return productoResponse;
         }
 
+        /// <summary>
+        /// Este metodo nos sirve para elegir un tipo de query que queramos a la hora de traer una lista de elementos
+        /// </summary>
+        /// <typeparam name="T">parametro generico que puede ser un ProductoItem o un Producto</typeparam>
+        /// <param name="listaItems">La lista que vamos a devolver en la query, con su tipo sabremos que devolver</param>
+        /// <param name="stockItems">parametro por defecto en false, si lo ponemos en true nos trae la query con stock mayor a 0</param>
+        /// <returns>el string con la query select</returns>
         private static string GetSelectQuery<T>(List<T> listaItems, bool stockItems = false) where T : ProductoItem
         {
             string query;
@@ -250,6 +293,12 @@ namespace Data
             return query;
         }
 
+        /// <summary>
+        /// Metodo que nos va a servir para devolvernos la query que queremos hacer segun el item que le pasemos
+        /// </summary>
+        /// <typeparam name="T">parametro generico que pued ser un ProductoItem o Producto</typeparam>
+        /// <param name="item">item por el cual se formará la query</param>
+        /// <returns>el string con la query insert</returns>
         private static string GetInsertQuery<T>(T item) where T : ProductoItem
         {
             string query = string.Empty;

@@ -13,7 +13,7 @@ namespace TP4
 {
     public partial class FrmListadoProductos : Form
     {
-        private const string MENSAJE = "Bienvenido, estos son los productos disponibles!";
+        private const string MENSAJE = "Bienvenido, estos son los productos disponibles!"; 
         public event delMostrarMensaje enviarMensaje;
 
         public FrmListadoProductos()
