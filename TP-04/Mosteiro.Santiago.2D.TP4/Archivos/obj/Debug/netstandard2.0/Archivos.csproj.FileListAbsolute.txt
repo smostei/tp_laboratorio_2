@@ -10,3 +10,5 @@ C:\Users\augus\Desktop\tp-laboratorio-2\TP-04\Mosteiro.Santiago.2D.TP4\Archivos\
 C:\Users\augus\Desktop\tp-laboratorio-2\TP-04\Mosteiro.Santiago.2D.TP4\Archivos\obj\Debug\netstandard2.0\Archivos.csproj.CopyComplete
 C:\Users\augus\Desktop\tp-laboratorio-2\TP-04\Mosteiro.Santiago.2D.TP4\Archivos\obj\Debug\netstandard2.0\Archivos.dll
 C:\Users\augus\Desktop\tp-laboratorio-2\TP-04\Mosteiro.Santiago.2D.TP4\Archivos\obj\Debug\netstandard2.0\Archivos.pdb
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-04\Mosteiro.Santiago.2D.TP4\Archivos\bin\Debug\netstandard2.0\Extensiones.dll
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-04\Mosteiro.Santiago.2D.TP4\Archivos\bin\Debug\netstandard2.0\Extensiones.pdb

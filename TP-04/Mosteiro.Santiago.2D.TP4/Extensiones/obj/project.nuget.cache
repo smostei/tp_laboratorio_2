@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "6fQvk2L4f8L9OmrC67HdycdtK1ZbwHTYkHMYyAdbCiAM9vE/awP4eY55V0+DkgVgZR5aqAyDqfyIadYVoUIlAQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\augus\\Desktop\\tp-laboratorio-2\\TP-04\\Mosteiro.Santiago.2D.TP4\\Extensiones\\Extensiones.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\augus\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\augus\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

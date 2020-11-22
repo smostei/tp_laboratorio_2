@@ -1,0 +1,9 @@
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-04\Mosteiro.Santiago.2D.TP4\Extensiones\bin\Debug\netstandard2.0\Extensiones.deps.json
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-04\Mosteiro.Santiago.2D.TP4\Extensiones\bin\Debug\netstandard2.0\Extensiones.dll
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-04\Mosteiro.Santiago.2D.TP4\Extensiones\bin\Debug\netstandard2.0\Extensiones.pdb
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-04\Mosteiro.Santiago.2D.TP4\Extensiones\obj\Debug\netstandard2.0\Extensiones.csprojAssemblyReference.cache
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-04\Mosteiro.Santiago.2D.TP4\Extensiones\obj\Debug\netstandard2.0\Extensiones.AssemblyInfoInputs.cache
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-04\Mosteiro.Santiago.2D.TP4\Extensiones\obj\Debug\netstandard2.0\Extensiones.AssemblyInfo.cs
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-04\Mosteiro.Santiago.2D.TP4\Extensiones\obj\Debug\netstandard2.0\Extensiones.csproj.CoreCompileInputs.cache
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-04\Mosteiro.Santiago.2D.TP4\Extensiones\obj\Debug\netstandard2.0\Extensiones.dll
+C:\Users\augus\Desktop\tp-laboratorio-2\TP-04\Mosteiro.Santiago.2D.TP4\Extensiones\obj\Debug\netstandard2.0\Extensiones.pdb

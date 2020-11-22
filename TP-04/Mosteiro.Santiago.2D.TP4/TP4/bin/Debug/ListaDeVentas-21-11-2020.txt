@@ -16,4 +16,10 @@ Tipo: Bebida
 Precio: 50,6
 --------------------------------
 
+ID: 7
+Nombre: Pepsi Light
+Tipo: Bebida
+Precio: 50,6
+--------------------------------
+
 

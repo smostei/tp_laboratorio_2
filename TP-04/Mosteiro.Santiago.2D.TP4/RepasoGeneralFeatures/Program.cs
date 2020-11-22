@@ -5,6 +5,7 @@ using Excepciones;
 using Archivos;
 using System.Collections.Generic;
 using System.Text;
+using Extensiones;
 
 namespace RepasoGeneralFeatures
 {
@@ -25,6 +26,11 @@ namespace RepasoGeneralFeatures
             DataBaseHelper.InsertarItem(p1); //Agrego ProductoLimpieza
             DataBaseHelper.InsertarItem(p3); //Agrego Papas lays
             DataBaseHelper.InsertarItem(p4); //Agrego Redbull
+
+            //Los siguientes productos serán insertados a la tabla Productos para que puedan probarse en el form de ante mano (no son ventas)
+            DataBaseHelper.InsertarItem(new Producto("Choripan", ProductoItem.TipoProducto.Comida, 150.5f, 25));
+            DataBaseHelper.InsertarItem(new Producto("Jabón en polvo", ProductoItem.TipoProducto.Limpieza, 42.8f, 13));
+            DataBaseHelper.InsertarItem(new Producto("Cerveza Quilmes", ProductoItem.TipoProducto.Bebida, 80.6f, 25));
 
             try
             {
@@ -86,9 +92,15 @@ namespace RepasoGeneralFeatures
                 Console.WriteLine("Archivo XML guardado con exito (ruta del proyecto)!");
             }
 
-            //THREADS Y DELEGADOS
+            //THREADS, DELEGADOS Y EVENTOS
+            //Estos están funcionando en los FORM (animaciones y mensajes)
 
+            //METODOS DE EXTENSIÓN
+            string fechaActual = DateTime.Now.FechaActualFormateada(); //devuelve la fecha actual -> dd-MM-yyyy
+            Console.WriteLine($"Fecha de hoy: {fechaActual}");
 
+            EliminarProductos();
+            EliminarProductosVendidos();
         }
 
         private static string GetListaVentas(List<ProductoItem> listaVentas)
@@ -101,6 +113,20 @@ namespace RepasoGeneralFeatures
             }
 
             return sb.ToString();
+        }
+
+        private static void EliminarProductos()
+        {
+            DataBaseHelper.EliminarProducto("ProductoLimpieza");
+            DataBaseHelper.EliminarProducto("Papas lays");
+            DataBaseHelper.EliminarProducto("Redbull");
+        }
+
+        private static void EliminarProductosVendidos()
+        {
+            DataBaseHelper.EliminarProducto("Fanta", false);
+            DataBaseHelper.EliminarProducto("7up", false);
+            DataBaseHelper.EliminarProducto("Fanta zero", false);
         }
     }
 }

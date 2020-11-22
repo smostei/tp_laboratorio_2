@@ -36,7 +36,7 @@ namespace Data
             catch (SqlException e)
             {
                 response = false;
-                throw new ProductoRepetidoException("Ya existe un producto con el mismo nombre");
+                throw new ProductoRepetidoException($"Ya existe un producto con el mismo nombre: {e.Message}");
             }
             finally
             {
@@ -163,13 +163,14 @@ namespace Data
             return listaItems;
         }
 
-        public static bool EliminarProducto(string nombreProducto)
+        public static bool EliminarProducto(string nombreProducto, bool tablaProductos = true)
         {
             bool response = true;
 
             try
             {
-                string query = "DELETE FROM Productos WHERE Nombre = @nombre";
+                string query =
+                    tablaProductos ? "DELETE FROM Productos WHERE Nombre = @nombre" : "DELETE FROM ProductosVendidos WHERE Nombre = @nombre";
 
                 command.Parameters.Clear();
                 command.CommandText = query;
@@ -278,4 +279,5 @@ namespace Data
         }
 
     }
+
 }

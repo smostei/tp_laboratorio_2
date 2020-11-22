@@ -4,6 +4,7 @@ using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
 using Excepciones;
+using Extensiones;
 
 namespace Archivos
 {
@@ -74,7 +75,7 @@ namespace Archivos
 
         public string RutaArchivo()
         {
-            return AppDomain.CurrentDomain.BaseDirectory + "Ventas.xml";
+            return AppDomain.CurrentDomain.BaseDirectory + "VentasXML-" + DateTime.Now.FechaActualFormateada() + ".xml";
         }
     }
 }

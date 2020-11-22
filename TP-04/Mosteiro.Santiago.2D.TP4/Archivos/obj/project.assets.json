@@ -35,6 +35,16 @@
         "runtime": {
           "bin/placeholder/Excepciones.dll": {}
         }
+      },
+      "Extensiones/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Extensiones.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Extensiones.dll": {}
+        }
       }
     }
   },
@@ -187,11 +197,17 @@
       "type": "project",
       "path": "../Excepciones/Excepciones.csproj",
       "msbuildProject": "../Excepciones/Excepciones.csproj"
+    },
+    "Extensiones/1.0.0": {
+      "type": "project",
+      "path": "../Extensiones/Extensiones.csproj",
+      "msbuildProject": "../Extensiones/Extensiones.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "Excepciones >= 1.0.0",
+      "Extensiones >= 1.0.0",
       "NETStandard.Library >= 2.0.3"
     ]
   },
@@ -223,6 +239,9 @@
           "projectReferences": {
             "C:\\Users\\augus\\Desktop\\tp-laboratorio-2\\TP-04\\Mosteiro.Santiago.2D.TP4\\Excepciones\\Excepciones.csproj": {
               "projectPath": "C:\\Users\\augus\\Desktop\\tp-laboratorio-2\\TP-04\\Mosteiro.Santiago.2D.TP4\\Excepciones\\Excepciones.csproj"
+            },
+            "C:\\Users\\augus\\Desktop\\tp-laboratorio-2\\TP-04\\Mosteiro.Santiago.2D.TP4\\Extensiones\\Extensiones.csproj": {
+              "projectPath": "C:\\Users\\augus\\Desktop\\tp-laboratorio-2\\TP-04\\Mosteiro.Santiago.2D.TP4\\Extensiones\\Extensiones.csproj"
             }
           }
         }

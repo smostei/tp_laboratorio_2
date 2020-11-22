@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using Excepciones;
+using Extensiones;
 
 namespace Archivos
 {
@@ -74,7 +75,7 @@ namespace Archivos
 
         public string RutaArchivo()
         {
-            return AppDomain.CurrentDomain.BaseDirectory + "ListaDeVentas.txt";
+            return AppDomain.CurrentDomain.BaseDirectory + "ListaDeVentas-" + DateTime.Now.FechaActualFormateada() + ".txt";
         }
     }
 }

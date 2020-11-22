@@ -10,6 +10,7 @@
       "Archivos/1.0.0": {
         "dependencies": {
           "Excepciones": "1.0.0",
+          "Extensiones": "1.0.0",
           "NETStandard.Library": "2.0.3"
         },
         "runtime": {
@@ -25,6 +26,11 @@
       "Excepciones/1.0.0": {
         "runtime": {
           "Excepciones.dll": {}
+        }
+      },
+      "Extensiones/1.0.0": {
+        "runtime": {
+          "Extensiones.dll": {}
         }
       }
     }
@@ -50,6 +56,11 @@
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
     },
     "Excepciones/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Extensiones/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

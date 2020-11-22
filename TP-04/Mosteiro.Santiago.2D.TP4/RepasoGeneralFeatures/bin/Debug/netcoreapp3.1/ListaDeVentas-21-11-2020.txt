@@ -1,0 +1,119 @@
+ID: 4
+Nombre: Pan Lactal
+Tipo: Comida
+Precio: 46,7
+--------------------------------
+
+ID: 5
+Nombre: Coca Cola
+Tipo: Bebida
+Precio: 705
+--------------------------------
+
+ID: 6
+Nombre: Pepsi
+Tipo: Bebida
+Precio: 50,6
+--------------------------------
+
+ID: 7
+Nombre: Pepsi Light
+Tipo: Bebida
+Precio: 50,6
+--------------------------------
+
+ID: 8
+Nombre: Fanta
+Tipo: Bebida
+Precio: 95,5
+--------------------------------
+
+ID: 9
+Nombre: 7up
+Tipo: Bebida
+Precio: 95,5
+--------------------------------
+
+ID: 10
+Nombre: Fanta zero
+Tipo: Bebida
+Precio: 95,5
+--------------------------------
+
+
+ID: 11
+Nombre: Fanta
+Tipo: Bebida
+Precio: 95,5
+--------------------------------
+
+ID: 12
+Nombre: 7up
+Tipo: Bebida
+Precio: 95,5
+--------------------------------
+
+ID: 13
+Nombre: Fanta zero
+Tipo: Bebida
+Precio: 95,5
+--------------------------------
+
+
+ID: 14
+Nombre: Fanta
+Tipo: Bebida
+Precio: 95,5
+--------------------------------
+
+ID: 15
+Nombre: 7up
+Tipo: Bebida
+Precio: 95,5
+--------------------------------
+
+ID: 16
+Nombre: Fanta zero
+Tipo: Bebida
+Precio: 95,5
+--------------------------------
+
+
+ID: 17
+Nombre: Fanta
+Tipo: Bebida
+Precio: 95,5
+--------------------------------
+
+ID: 18
+Nombre: 7up
+Tipo: Bebida
+Precio: 95,5
+--------------------------------
+
+ID: 19
+Nombre: Fanta zero
+Tipo: Bebida
+Precio: 95,5
+--------------------------------
+
+
+ID: 32
+Nombre: Fanta
+Tipo: Bebida
+Precio: 95,5
+--------------------------------
+
+ID: 33
+Nombre: 7up
+Tipo: Bebida
+Precio: 95,5
+--------------------------------
+
+ID: 34
+Nombre: Fanta zero
+Tipo: Bebida
+Precio: 95,5
+--------------------------------
+
+

@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using Entidades;
-using TP4;
+using Data;
 
 namespace TestUnitariosVentas
 {
@@ -13,7 +13,7 @@ namespace TestUnitariosVentas
         public void InsertarUnNuevoProductoDisponible()
         {
             //arrange
-            string nombreProducto = "Pepsi Light";
+            string nombreProducto = "Pepsi Light-insertarTest";
             Producto producto = new Producto(nombreProducto, ProductoItem.TipoProducto.Bebida, 50.6f, 2);
 
             //act
@@ -43,7 +43,7 @@ namespace TestUnitariosVentas
         public void ActualizarStockDeProducto()
         {
             //arrange
-            string nombreProducto = "Pepsi Light";
+            string nombreProducto = "Pepsi Light-actualizarTest";
             Producto producto = new Producto(nombreProducto, ProductoItem.TipoProducto.Bebida, 50.6f, 5); //stock 5
 
             //act
@@ -63,17 +63,29 @@ namespace TestUnitariosVentas
         public void InsertarNuevaVenta()
         {
             //arrange
-            string nombreItem = "Pepsi Light";
+            string nombreItem = "Pepsi Light-InsertarVentaTest";
+            string nombreItemEsperado = string.Empty;
+            List<ProductoItem> listaItems;
+
             ProductoItem item = new ProductoItem(nombreItem, ProductoItem.TipoProducto.Bebida, 50.6f);
 
             //act
             DataBaseHelper.InsertarItem(item);
+            listaItems = DataBaseHelper.GetListaItems<ProductoItem>();
 
-            //assert
-            Assert.AreEqual(nombreItem, DataBaseHelper.GetProductoPorNombre(nombreItem).Nombre);
+            foreach(ProductoItem i in listaItems)
+            {
+                if(i.Nombre == nombreItem)
+                {
+                    nombreItemEsperado = i.Nombre;
+                }
+            }
 
             //eliminamos el producto agregado para la prueba
-            DataBaseHelper.EliminarProducto(nombreItem);
+            DataBaseHelper.EliminarProducto(nombreItem, false);
+
+            //assert
+            Assert.AreEqual(nombreItem, nombreItemEsperado);
         }
 
     }

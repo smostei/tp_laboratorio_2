@@ -2,8 +2,8 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using Entidades;
-using TP4;
 using Excepciones;
+using Data;
 
 namespace TestUnitariosVentas
 {
@@ -15,7 +15,7 @@ namespace TestUnitariosVentas
         public void EjecutarProductoRepetidoException()
         {
             //arrange
-            string nombreProducto = "Pepsi Light";
+            string nombreProducto = "Pepsi Light-MismoNombreTest";
 
             if(!(DataBaseHelper.GetProductoPorNombre(nombreProducto) is null)) //Si hay un producto con este nombre, lo borro
             {

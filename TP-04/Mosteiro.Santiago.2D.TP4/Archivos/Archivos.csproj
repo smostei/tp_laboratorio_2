@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Excepciones\Excepciones.csproj" />
+    <ProjectReference Include="..\Extensiones\Extensiones.csproj" />
   </ItemGroup>
 
 </Project>
